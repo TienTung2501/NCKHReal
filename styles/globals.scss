@@ -1,0 +1,41 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Roboto:wght@300;400;500&display=swap');
+:root {
+    --background-color: #03091f;
+    --background-dark: #0b1126;
+    --navbar-color-beforeHover: #fff;
+    --text-color-hover: #ff8abd;
+    --text-color-dark: #333;
+}
+* {
+    box-sizing: border-box inherit;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    background: var(--background-color);
+    color: var(--navbar-color-beforeHover);
+    font-size: 1.6rem;
+    line-height: 1.8;
+    text-rendering: optimizeSpeed;
+}
+.container {
+    width: 100%;
+}
+.main-wrapper {
+    width: 100%;
+    min-height: 100vh;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: var(--navbar-color-beforeHover);
+}

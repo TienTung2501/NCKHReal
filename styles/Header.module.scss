@@ -1,0 +1,131 @@
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6.8rem;
+  display: flex;
+  justify-content: space-between;
+  transition: background-color color 0.5s ease-in-out;
+}
+
+.scrolled {
+  background-color: #d7dfef;
+  a {
+      color: #333 !important;
+      &:hover {
+          color: #b01010 !important;
+      }
+  }
+}
+.inner {
+  position: relative;
+  height: 100%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  .logo {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      a {
+          height: 100%;
+          display: flex;
+          align-items: center;
+      }
+  }
+  .navbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      .navbar-default {
+          // width: 100%;
+          display: flex;
+          li {
+              display: flex;
+              align-items: center;
+              list-style: none;
+              cursor: pointer;
+              margin: 0 1rem;
+              a {
+                  text-decoration: none;
+                  display: block;
+                  padding: 2rem 0.8rem;
+                  font-size: 1.8rem;
+                  font-weight: 500;
+                  color: var(--navbar-color-beforeHover);
+                  &:hover {
+                      color: var(--text-color-hover);
+                  }
+              }
+              @media (max-width: 768px) {
+                  height: 5rem;
+                  border-top: 0.1rem solid #c471ed;
+                  margin: 0;
+                  &:hover {
+                      background-color: #b1afaf;
+                  }
+              }
+          }
+
+          @media (max-width: 768px) {
+              display: none;
+              position: absolute;
+              top: 100%;
+              width: 40rem;
+              left: 0;
+              flex-direction: column;
+              background-color: var(--navbar-color-beforeHover);
+              margin: 0;
+              padding-left: 0;
+              li a {
+                  color: var(--text-color-dark);
+              }
+          }
+      }
+      @media (max-width: 768px) {
+          .expanded {
+              display: block;
+          }
+      }
+
+      .connectWalletted {
+          cursor: pointer;
+          width: 20rem;
+          height: 4rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 3rem;
+          background: linear-gradient(to left, #12c2e9, #c471ed, #f64f59);
+          a {
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              text-decoration: none;
+              &:hover {
+                  color: var(--text-color-hover);
+              }
+          }
+      }
+  }
+  .btn-nav {
+      background: rgba(116, 80, 254, 0.7);
+      border-radius: 0.5rem;
+      margin: 0 1rem;
+      width: 5rem;
+      height: 5rem;
+      display: none;
+      @media (max-width: 768px) {
+          display: block;
+      }
+      cursor: pointer;
+      &:hover {
+          opacity: 0.9;
+      }
+  }
+}
